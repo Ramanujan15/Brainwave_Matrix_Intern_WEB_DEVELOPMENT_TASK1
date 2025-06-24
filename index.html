@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-512.png">
+
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Expense Tracker</h1>
+    <button onclick="logout()" class="logout">🚪 Logout</button>
+
+    <section class="form-section">
+      <input type="text" id="desc" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="category">
+        <option value="Salary">💼 Salary</option>
+        <option value="Food">🍔 Food</option>
+        <option value="Travel">✈️ Travel</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Shopping">🛍️ Shopping</option>
+        <option value="Other">📦 Other</option>
+      </select>
+      <input type="date" id="date" required />
+      <div class="button-group">
+        <button onclick="addTransaction()">➕ Add</button>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <label>Filter by Date:</label>
+      <input type="date" id="filterDate" onchange="renderTransactions()" />
+      <div class="button-group">
+        <button onclick="clearDateFilter()">🧹 Clear</button>
+      </div>
+    </section>
+
+    <section class="summary-section">
+      <p>💸 Income: ₹<span id="income">0</span></p>
+      <p>🧾 Expense: ₹<span id="expense">0</span></p>
+      <p>🟢 Balance: ₹<span id="balance">0</span></p>
+    </section>
+
+    <section class="list-section">
+      <ul id="transactionList"></ul>
+    </section>
+
+    <!-- 🔽 Show Graph Button and Chart -->
+    <div class="chart-toggle-wrapper">
+      <button onclick="toggleChart()" id="toggleGraphBtn">📊 Show Graph</button>
+    </div>
+
+    <section class="chart-section" id="chartSection" style="display: none;">
+      <canvas id="expenseChart" width="400" height="200"></canvas>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

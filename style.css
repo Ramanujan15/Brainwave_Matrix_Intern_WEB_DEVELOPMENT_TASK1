@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #34495e;
+}
+
+input,
+select,
+button {
+  padding: 6px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+li.income {
+  background-color: #d4edda;
+}
+
+li.expense {
+  background-color: #f8d7da;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.logout {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+}
+
+.form-section,
+.filter-section,
+.summary-section,
+.chart-section {
+  margin-top: 1rem;
+}
+
+.summary-section p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: #2c3e50;
+}
+
+.chart-toggle-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+#toggleGraphBtn {
+  background-color: #27ae60;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#toggleGraphBtn:hover {
+  background-color: #1e8449;
+}
